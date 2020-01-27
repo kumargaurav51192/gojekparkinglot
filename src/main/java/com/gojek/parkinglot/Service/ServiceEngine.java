@@ -1,6 +1,7 @@
 package com.gojek.parkinglot.Service;
 
 import com.gojek.parkinglot.Exception.ParkingException;
+import com.gojek.parkinglot.model.Vehicle;
 
 import java.util.Optional;
 

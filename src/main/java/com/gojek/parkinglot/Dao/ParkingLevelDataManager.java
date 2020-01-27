@@ -1,5 +1,7 @@
 package com.gojek.parkinglot.Dao;
 
+import com.gojek.parkinglot.model.Vehicle;
+
 import java.util.List;
 
 public interface ParkingLevelDataManager<T extends Vehicle>

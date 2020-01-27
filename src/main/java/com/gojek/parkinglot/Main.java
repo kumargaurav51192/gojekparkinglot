@@ -7,6 +7,7 @@ import com.gojek.parkinglot.Service.Impl.ServiceImpl;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,18 +28,37 @@ public class Main {
             {
                 input = input.trim();
                 if(engine.validate(input)){
-                    engine.execute(input.trim());
-                }else{
-                    //throw exception
-                }
+                    try
+                    {
+                        engine.execute(input);
+                    }
+                    catch (Exception e)
+                    {
+                        System.out.println(e.getMessage());
+                    }
+                }else
+                    System.out.println("Incorrect Command Found at line: " + lineNo + " ,Input: " + input);
+
                 lineNo++;
             }
         }
         catch (Exception e)
+        {   e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        finally
         {
-
+            try
+            {
+                if (bufferReader != null)
+                    bufferReader.close();
+            }
+            catch (IOException e)
+            {
+            }
         }
 
 
     }
+
 }

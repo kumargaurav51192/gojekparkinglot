@@ -1,6 +1,10 @@
 package com.gojek.parkinglot.Dao.Impl;
 
+import com.gojek.parkinglot.Constants.Constants;
 import com.gojek.parkinglot.Dao.ParkingLevelDataManager;
+import com.gojek.parkinglot.model.Vehicle;
+import com.gojek.parkinglot.model.strategy.NearestFirstParkingStrategy;
+import com.gojek.parkinglot.model.strategy.ParkingStrategy;
 
 import java.util.ArrayList;
 import java.util.List;

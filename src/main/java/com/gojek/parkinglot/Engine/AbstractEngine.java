@@ -1,6 +1,7 @@
 package com.gojek.parkinglot.Engine;
 
 import com.gojek.parkinglot.Constants.ValidateInput;
+import com.gojek.parkinglot.Exception.ParkingException;
 import com.gojek.parkinglot.Service.ServiceEngine;
 
 /**
@@ -12,8 +13,7 @@ public interface AbstractEngine {
 
     void setService(ServiceEngine service);
 
-    void execute(String action);
-
+    void execute(String action) throws ParkingException;
     default boolean validate(String inputString)
     {
         boolean valid = true;

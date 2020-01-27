@@ -1,7 +1,14 @@
 package com.gojek.parkinglot.Service.Impl;
 
+import com.gojek.parkinglot.Constants.Constants;
+import com.gojek.parkinglot.Dao.Impl.MemoryParkingManager;
+import com.gojek.parkinglot.Dao.ParkingDataManager;
+import com.gojek.parkinglot.Exception.ErrorCode;
 import com.gojek.parkinglot.Exception.ParkingException;
 import com.gojek.parkinglot.Service.ServiceEngine;
+import com.gojek.parkinglot.model.Vehicle;
+import com.gojek.parkinglot.model.strategy.NearestFirstParkingStrategy;
+import com.gojek.parkinglot.model.strategy.ParkingStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
